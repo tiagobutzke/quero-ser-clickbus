@@ -46,11 +46,23 @@ class Banknotes
     }
 
     /**
+     * Get grater note
+     * 
+     * @return float|int
+     */
+    public function getGreater()
+    {
+        $this->descSort();
+
+        return max($this->banknotes);
+    }
+
+    /**
      * Get note values desc sorted
      * 
      * @return void
      */
-    public function descSort()
+    private function descSort()
     {
         rsort($this->banknotes);
     }
