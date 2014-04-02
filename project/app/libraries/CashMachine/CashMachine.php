@@ -33,6 +33,8 @@ class CashMachine
         $this->validateValue($value);
         $this->verifyAvailability($value);
 
+        $this->banknotes->descSort();
+
         while ($value > 0) {
             $this->banknotes->filterMaxValue($value);
 
