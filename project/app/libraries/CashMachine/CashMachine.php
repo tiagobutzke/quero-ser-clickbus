@@ -6,8 +6,14 @@ use ClickBus\Libraries\CashMachine\Exception\InvalidArgumentException;
 
 class CashMachine
 {
+    /**
+     * @var ClickBus\Libraries\ChashMachine\Banknotes
+     */
     private $banknotes;
 
+    /**
+     * @var array
+     */
     private $withdrawBanknotes = array();
 
     public function __construct(Banknotes $banknotes)
@@ -26,8 +32,6 @@ class CashMachine
     {
         $this->validateValue($value);
         $this->verifyAvailability($value);
-
-        $this->banknotes->descSort();
 
         while ($value > 0) {
             $this->banknotes->filterMaxValue($value);
@@ -67,7 +71,7 @@ class CashMachine
         );
 
         if (count($filtered) == 0) {
-            throw new NoteUnavailableException('Note available for this value.');
+            throw new NoteUnavailableException('Note not available for this value.');
         }
     }
 }

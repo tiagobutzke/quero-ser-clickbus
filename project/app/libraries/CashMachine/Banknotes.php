@@ -43,6 +43,8 @@ class Banknotes
                 return ($var <= $max);
             }
         );
+
+        $this->descSort();
     }
 
     /**
@@ -50,7 +52,7 @@ class Banknotes
      * 
      * @return void
      */
-    public function descSort()
+    private function descSort()
     {
         rsort($this->banknotes);
     }

@@ -34,8 +34,7 @@ class CashMachineTest extends \PHPUnit_Framework_TestCase
 
     public function testWithdrawNull()
     {
-        $this->assertEquals(
-            array(),
+        $this->assertEmpty(
             $this->cashMachine->withdraw(null)
         );
     }

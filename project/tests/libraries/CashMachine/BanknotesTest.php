@@ -13,9 +13,9 @@ class BanknotesTest extends \PHPUnit_Framework_TestCase
         $this->banknotes = new Banknotes();
     }
 
-    public function testGetDescSorted()
+    public function testFilterMaxValue()
     {
-        $this->banknotes->descSort();
-        $this->assertEquals(array(100, 50, 20, 10), $this->banknotes->getBanknotes());
+        $this->banknotes->filterMaxValue(20);
+        $this->assertEquals(array(20, 10), $this->banknotes->getBanknotes());
     }
 }
