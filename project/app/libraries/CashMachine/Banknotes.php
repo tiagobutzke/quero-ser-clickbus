@@ -45,16 +45,13 @@ class Banknotes
         );
     }
 
-
     /**
      * Get note values desc sorted
      * 
-     * @return array
+     * @return void
      */
-    public function getDescSorted()
+    public function descSort()
     {
         rsort($this->banknotes);
-
-        return $this->banknotes;
     }
 }

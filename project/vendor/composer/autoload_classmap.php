@@ -8,6 +8,8 @@ $baseDir = dirname($vendorDir);
 return array(
     'ClickBus\\Libraries\\CashMachine\\Banknotes' => $baseDir . '/app/libraries/CashMachine/Banknotes.php',
     'ClickBus\\Libraries\\CashMachine\\CashMachine' => $baseDir . '/app/libraries/CashMachine/CashMachine.php',
+    'ClickBus\\Libraries\\CashMachine\\Exception\\InvalidArgumentException' => $baseDir . '/app/libraries/CashMachine/Exception/InvalidArgumentException.php',
+    'ClickBus\\Libraries\\CashMachine\\Exception\\NoteUnavailableException' => $baseDir . '/app/libraries/CashMachine/Exception/NoteUnavailableException.php',
     'File_Iterator' => $vendorDir . '/phpunit/php-file-iterator/File/Iterator.php',
     'File_Iterator_Facade' => $vendorDir . '/phpunit/php-file-iterator/File/Iterator/Facade.php',
     'File_Iterator_Factory' => $vendorDir . '/phpunit/php-file-iterator/File/Iterator/Factory.php',

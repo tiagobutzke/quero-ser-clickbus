@@ -15,6 +15,7 @@ class BanknotesTest extends \PHPUnit_Framework_TestCase
 
     public function testGetDescSorted()
     {
-        $this->assertEquals(array(100, 50, 20, 10), $this->banknotes->getDescSorted());
+        $this->banknotes->descSort();
+        $this->assertEquals(array(100, 50, 20, 10), $this->banknotes->getBanknotes());
     }
 }
